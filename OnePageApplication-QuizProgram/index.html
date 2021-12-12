@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b6c6ba9da.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz-Todo</title>
+</head>
+<body>
+
+    <!---- Todo List ---->
+    <div class="container ">
+
+        <header class="text-center text-light my-4">
+          <h1 class="mb-4">Todo List</h1>
+          <form class="search">
+            <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+          </form>
+        </header>
+    
+        <ul class="list-group todos mx-auto text-light">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Go to school</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Go to dentist</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Go to buy groceries</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+        </ul>
+    
+        <form class="add text-center my-4">
+          <label class="text-light">Add a new todo...</label>
+          <input class="form-control m-auto" type="text" name="add" />
+        </form>
+    
+    </div>
+
+    <!---- top section ---->
+    <div class="intro py-3 bg-white text-center">
+        <div class="container">
+            <h2 class="text-primary">Quiz</h2>
+            
+        </div>
+    </div>
+
+    <!---- Quiz section ---->
+    <div class="quiz py-4 bg-primary">
+        <div class="container">
+            <h2 class="my-5">How much do you know about Capitals?</h2>
+           
+            <form class="quiz-form text-light">
+                <div class="my-5">
+                    <p class="lead ">1.- What is the capital of Sweaden</p>
+                   <div class="form-check my-2 text-white-50">
+                       <input type="radio" name="q1" value="A" checked>
+                       <label class="form-check-label">Copenhagen</label>
+                   </div> 
+                   <div class="form-check my-2 text-white-50 ">
+                    <input type="radio" name="q1" value="B" checked>
+                    <label class="form-check-label">Stockolmo</label>
+                </div>  
+                <div class="form-check my-2 text-white-50 ">
+                    <input type="radio" name="q1" value="C" checked>
+                    <label class="form-check-label">Oslo</label>
+                </div> 
+
+                </div>
+                <div class="my-5">
+                    <p class="lead ">2.-What is the capital of Lithuania</p>
+                   <div class="form-check my-2 text-white-50">
+                       <input type="radio" name="q2" value="A" checked>
+                       <label class="form-check-label">Vilnius</label>
+                   </div> 
+                   <div class="form-check my-2 text-white-50 ">
+                    <input type="radio" name="q2" value="B" checked>
+                    <label class="form-check-label">Paris</label>
+                </div>  
+                <div class="form-check my-2 text-white-50 ">
+                    <input type="radio" name="q2" value="C" checked>
+                    <label class="form-check-label">Riga</label>
+                </div>   
+
+                </div>
+                <div class="my-5">
+                    <p class="lead">3.-What is the capital of Bulgary</p>
+                   <div class="form-check my-2 text-white-50">
+                       <input type="radio" name="q3" value="A" checked>
+                       <label class="form-check-label">Tallin</label>
+                   </div> 
+                   <div class="form-check my-2 text-white-50 ">
+                    <input type="radio" name="q3" value="B" checked>
+                    <label class="form-check-label">Sofia</label>
+                </div>  
+                <div class="form-check my-2 text-white-50">
+                    <input type="radio" name="q3" value="C" checked>
+                    <label class="form-check-label">Sarajevo</label>
+                </div>   
+
+                </div>
+                <div class="my-5">
+                    <p class="lead">3.-What is the capital of Czech Republic</p>
+                   <div class="form-check my-2 text-white-50">
+                       <input type="radio" name="q4" value="A" checked>
+                       <label class="form-check-label">Prague</label>
+                   </div> 
+                   <div class="form-check my-2 text-white-50">
+                    <input type="radio" name="q4" value="B" checked>
+                    <label class="form-check-label">Moldovia</label>
+                </div>  
+                <div class="form-check my-2 text-white-50">
+                    <input type="radio" name="q4" value="C" checked>
+                    <label class="form-check-label">Roma</label>
+                </div>   
+
+             </div>
+                
+             <div class="text-ceter ">
+                    <input type="submit" class="btn btn-light">
+                    
+            </div>
+
+         </form>
+    </div>
+        
+    </div>
+     <!--result section-->
+     <div class="result my-4 text-primary ">
+         <div class="container ">
+             <p>You have <span class="text-primary "> </span> correct answer</p>
+         </div>
+     </div>
+     
+  
+    <script src="app.js"></script>
+    <script>
+        function myTodoFunction() {
+          var x = document.getElementById("myTODO");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>
